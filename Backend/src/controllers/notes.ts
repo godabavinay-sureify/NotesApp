@@ -102,6 +102,7 @@ export const getNotes: RequestHandler<
 	unknown
 > = async (_, res, next) => {
 	try {
+		// throw createHttpError(401, "UnAuthorized");
 		const notes = await NotesModel.find().exec();
 		res.status(200).json(notes);
 	} catch (error) {
