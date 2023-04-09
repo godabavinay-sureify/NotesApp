@@ -1,6 +1,7 @@
 import "dotenv/config";
 
 import express, { NextFunction, Request, Response } from "express";
+import cors from "cors";
 import createHttpError, { HttpError } from "http-errors";
 import morgan from "morgan";
 
@@ -16,6 +17,8 @@ const PORT = env.PORT;
 app.listen(PORT, () => {
 	console.log(`App Listening on PORT: ${PORT}`);
 });
+
+app.use(cors());
 
 app.use(morgan("dev"));
 
