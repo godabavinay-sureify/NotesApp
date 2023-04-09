@@ -39,8 +39,9 @@ function App() {
   return (
     <Container>
       <Button
-        className={`mb-4 ${styleUtils.blockCenter} ${styleUtils.flexCenter}`}
+        className={`mb-4 mt-4 ${styleUtils.blockCenter} ${styleUtils.flexCenter}`}
         onClick={() => setShowAddNoteDialog(true)}>
+        <FaPlus />
         Add new note
       </Button>
       <Row xs={1} md={2} xl={3} className="g-4">
